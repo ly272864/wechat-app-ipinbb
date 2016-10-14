@@ -1,0 +1,11 @@
+<view class="page">
+    <view class="page__hd">
+        <text class="page__title">video</text>
+        <text class="page__desc">视频</text>
+    </view>
+    <view class="page__bd">
+        <view class="section tc">
+            <video src="http://www.w3school.com.cn//i/movie.mp4" binderror="videoErrorCallback"></video>
+        </view>
+    </view>
+</view>
