@@ -120,7 +120,7 @@
     color: #999;
 }
 
-.navbar .navigator-hover {
+.navbar .curNavigator {
     font-size: 32rpx;
     color: #f4554a;
     border-bottom: 4rpx solid #f4554a;
@@ -209,4 +209,18 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.promptShow {
+    display: block;
+    width: 100%;
+    padding-bottom: 20rpx;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 30rpx;
+    color: #878787;
+}
+
+.promptHide {
+    display: none;
 }

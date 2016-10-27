@@ -1,12 +1,12 @@
 <view>
-    <scroll-view scroll-y="true" bindscroll="scroolTop" bindscrolltolower="downLoad" class="layout" scroll-top="50">
+    <scroll-view scroll-y="true" bindscroll="scroolTop" bindscrolltolower="downLoad" scroll-top="{{scrollTop}}" class="layout"> <!--  scroll-top="{{scrollTop}}" -->
         <!-- banner start -->
         <view class="banner">
             <swiper indicator-dots="{{bannerConfig.indicatorDots}}" autoplay="{{bannerConfig.autoplay}}" interval="{{bannerConfig.interval}}" duration="{{bannerConfig.duration}}">
-                <block wx:for="{{bannerUrls}}">
+                <block wx:for="{{bannerItems}}">
                     <swiper-item>
-                        <navigator url="../component/detail/detail">
-                            <image src="{{item}}" class="slide-image" mode="{{bannerConfig.mode}}" width="750" height="300"/>
+                        <navigator url="../component/detail/detail?id={{item.goodId}}&platformId={{item.platformId}}">
+                            <image src="{{item.imgUrl}}" class="slide-image" mode="{{bannerConfig.mode}}" width="750" height="300"/>
                         </navigator>
                     </swiper-item>
                 </block>
@@ -41,7 +41,8 @@
         <!-- navigator start -->
         <view class="navbar-box" id="navbar-box">
             <scroll-view class="navbar scroll-view_H {{fixed ? fixed : ''}}" scroll-x="true" style="width: 100%;">
-                <navigator wx:for="{{navItems}}" class="{{item.className == 'navigator-hover' ? item.className : 'other-navigator-hover'}}">{{item.text}}</navigator>
+                <navigator wx:for="{{navItems}}" class="{{item.className != '' ? item.className : ''}}" 
+                data-tabIndex="{{item.tabIndex}}" data-category="{{item.category}}" bindtap="navLink">{{item.text}}</navigator>
             </scroll-view>
         </view>
         <!-- / navigator end -->
@@ -67,10 +68,14 @@
 
         <!-- loading start -->
         <view class="body-view">
-            <loading hidden="{{hidden}}" bindchange="loadingChange">
+            <loading hidden="{{hidden}}">
                 加载中...
             </loading>
         </view>
         <!-- / loading end -->
+
+        <!-- prompt message start -->
+        <text class="{{tipShow ? 'promptShow' : 'promptHide'}}">没有更多内容了</text>
+        <!-- / prompt message end -->
     </scroll-view>
 </view>
