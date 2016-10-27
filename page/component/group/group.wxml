@@ -1,0 +1,70 @@
+<view>
+    <!-- header start -->
+    <view class="header">
+        <view class="header-item">
+            <view class="status-img"></view>
+            <view class="status-text">
+                <text>付款开团</text>或参团
+            </view>
+        </view>
+
+        <view class="header-item header-item-center">
+            <view class="status-img"></view>
+            <view class="status-text">
+                <text>分享给好友</text>邀请参团
+            </view>
+        </view>
+
+        <view class="header-item header-item-last">
+            <view class="status-text">
+                <text>达到人数</text>顺利成团
+            </view>
+            <view class="status-img"></view>
+        </view>
+    </view>
+    <!-- / header end -->
+
+    <!-- detail start -->
+    <navigator url="../detail/detail?id={{detail.id}}">
+        <view class="detail-box">
+            <image class="detail-img" src="{{detail.img}}"></image>
+            <view class="detail-content">
+                <text class="detail-title">{{detail.title}}</text>
+                <view class="price">
+                    <text class="new-price">{{detail.people}}人团¥{{detail.newPrice}}</text>
+                    <text class="odd-price">¥{{detail.oddPrice}}</text>
+                </view>
+            </view>
+        </view>
+    </navigator>
+    <!-- / detail end -->
+
+    <!-- countdown start -->
+    <view class="countdown">
+        <view class="countdown-top"> 离成团还差<text class="color-red">{{countdown.people}}</text>人</view>
+        <view class="countdown-center">剩<text class="countdown-time color-red">{{countdown.time}}</text>自动结束</view>
+        <text class="countdown-btm">机不可失，赶快参团吧！</text>
+    </view>
+    <!-- / countdown end -->
+
+    <!-- list start -->
+    <view class="lists-box">
+        <text class="lists-title">参团记录</text>
+
+        <view class="lists-content">
+            <view wx:for="{{lists}}" class="item-box">
+                <image class="user-img" src="{{item.userImg}}" ></image>
+                
+                <view class="item-content">
+                    <text class="item-name">{{item.userName}}</text>
+                    <text class="item-title">{{item.time}}</text>
+                </view>
+
+                <block wx:if="{{item.head}}">
+                    <view class="item-head">团长大人</view>
+                </block>
+            </view>
+        </view>
+    </view>
+    <!-- /list  end -->
+</view>

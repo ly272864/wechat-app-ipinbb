@@ -1,0 +1,76 @@
+<view>
+    <scroll-view scroll-y="true" bindscroll="scroolTop" bindscrolltolower="downLoad" class="layout" scroll-top="50">
+        <!-- banner start -->
+        <view class="banner">
+            <swiper indicator-dots="{{bannerConfig.indicatorDots}}" autoplay="{{bannerConfig.autoplay}}" interval="{{bannerConfig.interval}}" duration="{{bannerConfig.duration}}">
+                <block wx:for="{{bannerUrls}}">
+                    <swiper-item>
+                        <navigator url="../component/detail/detail">
+                            <image src="{{item}}" class="slide-image" mode="{{bannerConfig.mode}}" width="750" height="300"/>
+                        </navigator>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+        <!-- / banner end -->
+
+        <!-- activity start -->
+        <view class="home-hot">
+            <navigator class="hot-left" url="">
+                <image mode="" src="{{activityUrls[0]}}"></image>
+            </navigator>
+
+            <view class="hot-right">
+                <navigator class="hot-right-top" url="">
+                    <image mode="aspectFit" src="{{activityUrls[1]}}"></image>
+                </navigator>
+
+                <view class="hot-right-btm">
+                    <navigator class="hot-right-btm-left" url="">
+                        <image mode="aspectFit" src="{{activityUrls[2]}}"></image>
+                    </navigator>
+                    
+                    <navigator class="hot-right-btm-right" url="">
+                        <image mode="aspectFit" src="{{activityUrls[3]}}"></image>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <!-- / activity end -->
+
+        <!-- navigator start -->
+        <view class="navbar-box" id="navbar-box">
+            <scroll-view class="navbar scroll-view_H {{fixed ? fixed : ''}}" scroll-x="true" style="width: 100%;">
+                <navigator wx:for="{{navItems}}" class="{{item.className == 'navigator-hover' ? item.className : 'other-navigator-hover'}}">{{item.text}}</navigator>
+            </scroll-view>
+        </view>
+        <!-- / navigator end -->
+
+        <!-- list start -->
+        <view class="lists-box">
+            <navigator wx:for="{{list}}" class="item-box" url="../component/detail/detail?id={{item.goods_id}}">
+                <view class="item-img">
+                    <image src="{{item.goods_img}}"></image>
+                </view>
+                <text class="item-title">{{item.goods_title}}</text>
+                <text class="item-content">{{item.goods_promote_info}}</text>
+                <view class="item-btm">
+                    <view class="item-buy-people">
+                        <view class=""></view>
+                        {{item.goods_group_size}}人团
+                    </view>
+                    <view class="item-price">¥{{item.goods_group_price}}</view>
+                </view>
+            </navigator>           
+        </view>
+        <!-- / list end -->
+
+        <!-- loading start -->
+        <view class="body-view">
+            <loading hidden="{{hidden}}" bindchange="loadingChange">
+                加载中...
+            </loading>
+        </view>
+        <!-- / loading end -->
+    </scroll-view>
+</view>

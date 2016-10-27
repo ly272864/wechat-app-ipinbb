@@ -1,0 +1,42 @@
+<view>
+    <scroll-view scroll-y="true" bindscrolltolower="loadList" class="layout">
+
+        <!-- list start -->
+        <view>
+            <navigator wx:for="{{lists}}" class="item-box" url="../component/group/group?id={{item.id}}">
+                <view class="item-top">
+                    <view class="hot-img">
+                        <image src="{{item.productImg}}"></image>
+                    </view>
+
+                    <view class="item-top-right">
+                        <text class="item-title">{{item.title}}</text>
+                        <view class="item-price">{{item.people}}人团 ¥{{item.price}}</view>
+                        <view class="item-No-time-box">
+                            <view class="item-No">仅差<text class="text-red">{{item.lack}}</text>人</view>
+                            <text class="item-time">剩余时间 00 : 14 : 48</text>
+                        </view>
+                    </view>
+                </view>
+                
+                <view class="item-btm">
+                    <view class="item-user-box">
+                        <view wx:for="{{item.userImg}}" class="item-user-img">
+                            <image src="{{item}}"></image>
+                        </view>
+                    </view>
+                    <text class="item-btn">参与</text>
+                </view>
+            </navigator>
+        </view>
+        <!-- / list end -->
+
+        <!-- loading start -->
+        <view class="body-view">
+            <loading hidden="{{hidden}}" bindchange="loadingChange">
+                加载中...
+            </loading>
+        </view>
+        <!-- / loading end -->
+    </scroll-view>
+</view>
