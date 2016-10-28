@@ -71,6 +71,7 @@
 
 .item-time {
     width: 300rpx;
+    text-align: right;
 }
 
 .item-btm {

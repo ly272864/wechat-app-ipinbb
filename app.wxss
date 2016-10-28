@@ -230,3 +230,17 @@ checkbox, radio{
 .section__ctn{
 
 }
+
+.promptShow {
+    display: block;
+    width: 100%;
+    padding-bottom: 20rpx;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 30rpx;
+    color: #878787;
+}
+
+.promptHide {
+    display: none;
+}

@@ -3,7 +3,7 @@
         <!-- banner start -->
         <view class="banner">
             <swiper indicator-dots="{{bannerConfig.indicatorDots}}" autoplay="{{bannerConfig.autoplay}}" interval="{{bannerConfig.interval}}" duration="{{bannerConfig.duration}}">
-                <block wx:for="{{bannerItems}}">
+                <block wx:for="{{bannerItems}}" wx:key="">
                     <swiper-item>
                         <navigator url="../component/detail/detail?id={{item.goodId}}&platformId={{item.platformId}}">
                             <image src="{{item.imgUrl}}" class="slide-image" mode="{{bannerConfig.mode}}" width="750" height="300"/>
@@ -41,7 +41,7 @@
         <!-- navigator start -->
         <view class="navbar-box" id="navbar-box">
             <scroll-view class="navbar scroll-view_H {{fixed ? fixed : ''}}" scroll-x="true" style="width: 100%;">
-                <navigator wx:for="{{navItems}}" class="{{item.className != '' ? item.className : ''}}" 
+                <navigator wx:for="{{navItems}}" wx:key="" class="{{item.className != '' ? item.className : ''}}" 
                 data-tabIndex="{{item.tabIndex}}" data-category="{{item.category}}" bindtap="navLink">{{item.text}}</navigator>
             </scroll-view>
         </view>
@@ -49,7 +49,7 @@
 
         <!-- list start -->
         <view class="lists-box">
-            <navigator wx:for="{{list}}" class="item-box" url="../component/detail/detail?id={{item.goods_id}}">
+            <navigator wx:for="{{list}}" wx:key="" class="item-box" url="../component/detail/detail?id={{item.goods_id}}">
                 <view class="item-img">
                     <image src="{{item.goods_img}}"></image>
                 </view>
