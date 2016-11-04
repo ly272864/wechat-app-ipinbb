@@ -14,7 +14,7 @@
                         <view class="item-price">{{item.groupSize}}人团 ¥{{item.groupPrice}}</view>
                         <view class="item-No-time-box">
                             <view class="item-No">仅差<text class="text-red">{{item.lessNum}}</text>人</view>
-                            <view class="item-time">剩余时间 <text>{{item.groupEndTime}}</text></view>
+                            <view class="item-time">剩余时间 <text>{{item.displayTime}}</text></view>
                         </view>
                     </view>
                 </view>

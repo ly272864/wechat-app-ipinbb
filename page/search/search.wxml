@@ -1,4 +1,5 @@
 <view class="body-view">
+  <text>{{nm}}</text>
   <loading hidden="{{hidden}}" bindchange="loadingChange">
     加载中...
   </loading>

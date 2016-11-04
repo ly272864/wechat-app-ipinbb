@@ -11,12 +11,5 @@ Page({
     this.setData({
       hidden: false
     })
-
-    var that = this
-    setTimeout(function () {
-      that.setData({
-        hidden: true
-      })
-    }, 1500)
   }
 })

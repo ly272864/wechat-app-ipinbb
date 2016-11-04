@@ -26,11 +26,9 @@ Page({
     list: []                // 商品数据
   },
 
-  // 首次加载
-  onLoad: function(e) {
+  onLoad: function(e) {     // 首次加载
     var self = this;
-    // 列表数据请求
-    wx.request({
+    wx.request({            // 列表数据请求
       url: 'http://m.ipinbb.com/ipbb/home/load?ti=-1&ft=Home',
       header: {
           'goods_promote_info-Type': 'application/json'
@@ -39,9 +37,8 @@ Page({
 
         var nextPage = JSON.stringify(res.data.nextPage),
             resData = res.data.lst;
-
-        // 将数据与参数添加到到data中
-        self.setData({
+            
+        self.setData({      // 将数据与参数添加到到data中
           hidden: true, 
           pageIndex: 1,
           nextPage: nextPage,
@@ -52,9 +49,8 @@ Page({
         console.log("网络异常！");
       }
     });
-
-    // 导航栏数据请求;
-    wx.request({
+    
+    wx.request({            // 导航栏数据请求;
       url: 'http://service.ipinbb.com:8080/goodsService/getHomeTabs',
       header: {
           'goods_promote_info-Type': 'application/json'
@@ -64,7 +60,7 @@ Page({
         var navArr = [],
             navData = res.data;
         
-        navData.forEach(function(item){
+        navData.forEach(function(item){         // 修改点击元素的高亮状态
           var navObj = {};
           navObj.category = item.tabFilterType;
           navObj.tabIndex = item.tabId
@@ -83,9 +79,8 @@ Page({
         console.log("网络异常！");
       }
     })
-
-    // banner图数据请求;
-    wx.request({
+    
+    wx.request({            // banner图数据请求;
       url: 'http://service.ipinbb.com:8080/goodsService/getHomeBanner',
       header: {
           'goods_promote_info-Type': 'application/json'
@@ -117,8 +112,7 @@ Page({
     })
   },
 
-  // nav切换
-  navLink: function(e) {
+  navLink: function(e) {    // nav导航栏切换
     var self = this,
         dataObj = self.data,
         obj = e.currentTarget.dataset,
@@ -126,8 +120,7 @@ Page({
         category = obj.category,
         navArr = dataObj.navItems;
 
-    // 去除上一个nav高亮状态,并给当前点击的添加高亮状态
-    navArr.forEach(function(item){
+    navArr.forEach(function(item){      // 去除上一个nav高亮状态,并给当前点击的添加高亮状态
       var i = item.tabIndex;
       if(i == tabIndex) {
         item.className = "curNavigator";
@@ -137,9 +130,8 @@ Page({
     });
 
     // console.log(navArr);
-
-    // 设置加载动画以及其他参数;
-    self.setData({
+    
+    self.setData({          // 设置加载动画以及其他参数;
       scrollTop: "321",
       hidden: false,
       tabIndex: tabIndex,
@@ -154,8 +146,7 @@ Page({
     var nextPage = dataObj.nextPage,
         pageIndex = dataObj.pageIndex;
 
-    // 发起请求;
-    wx.request({
+    wx.request({            // nav导航栏切换数据请求;
       url: 'http://m.ipinbb.com/ipbb/home/load',
       data : {
         nextPage : nextPage,
@@ -184,8 +175,7 @@ Page({
     });
   },
 
-  // nav居顶
-  scroolTop: function(e) {
+  scroolTop: function(e) {        // nav导航栏居顶
     if(e.detail.scrollTop >= 321) {
       this.setData({
         fixed: "fixed"
@@ -197,8 +187,8 @@ Page({
     }
   },
   
-  // 上拉加载更多数据;
-  downLoad: function(e) {
+  
+  downLoad: function(e) {         // 上拉加载更多数据;
     var self = this,
         nextPage = self.data.nextPage,
         category = self.data.category,
@@ -206,14 +196,14 @@ Page({
         tipShow = self.data.tipShow,
         pageIndex = Number(self.data.pageIndex);
         
-    // 判断是否存在更多数据
-    if(!tipShow) {
-      // 加载状态
-      self.setData({
+   
+    if(!tipShow) {                // 判断是否存在更多数据
+      
+      self.setData({              // 加载动画
         hidden: false
       });
-      // 发起请求
-      wx.request({
+      
+      wx.request({                // 发起请求
         url: 'http://m.ipinbb.com/ipbb/home/load', 
         data : {
           nextPage : nextPage,
@@ -230,8 +220,8 @@ Page({
             var resData = res.data.lst,
                 nextPage = JSON.stringify(res.data.nextPage);
 
-            // 将数据与参数添加到到data中
-            self.setData({
+            
+            self.setData({        // 将数据与参数添加到到data中
               hidden: true,
               pageIndex: pageIndex + 1,
               nextPage: nextPage,
@@ -251,8 +241,8 @@ Page({
     }
   },
 
-  // 数据提取;
-  dataRead: function(data) {
+  
+  dataRead: function(data) {      // 数据提取;
     var self = this, dataArr = [];
     data.forEach(function(item){
       var itemObj = {};

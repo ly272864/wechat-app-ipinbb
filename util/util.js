@@ -15,6 +15,17 @@ function formatTime(time) {
   }).join(':')
 }
 
+// function countdown(time) {
+
+//     if (typeof time !== 'number' || time < 0) {
+//         return time
+//     }
+//     setInterval(function(){
+//         return (time/1000) - 1
+//     }, 1000)
+// }
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  // countdown: countdown
 }
