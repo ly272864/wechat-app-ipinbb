@@ -1,10 +1,13 @@
 {
   "pages": [
       "page/index/index",
-      "page/hot/hot",
+      "page/hot/hot", 
       "page/search/search",
       "page/eval/eval",
       "page/user/user",
+      "page/activity/discount/discount",
+      "page/activity/lists/lists",
+      "page/activity/tenGroup/tenGroup",
 
       "page/component/group/group",
       "page/component/detail/detail"

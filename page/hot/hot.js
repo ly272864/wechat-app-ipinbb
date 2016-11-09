@@ -5,7 +5,7 @@ Page({
         
         hidden: true,           // loading动画是否显示
         tipShow: false,         // 判断是否还有更多数据
-        page: 0,               // 当前分页
+        page: 0,                // 当前分页
         nextPage: "",           // 分页信息
         us: "",                 // 用户分享的ID，之前为了做分享统计什么的，现在没卵用
         lists: []
@@ -76,8 +76,9 @@ Page({
             });
 
             var page = Number(self.data.page);
-            console.log(typeof self.data.nextPage);
+            // console.log(typeof self.data.nextPage);
             self.data.nextPage.nextPage = page + 1;
+            console.log(self.data.nextPage);
 
             
             // 发送请求

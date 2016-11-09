@@ -31,7 +31,7 @@ Page({
     wx.request({            // 列表数据请求
       url: 'http://m.ipinbb.com/ipbb/home/load?ti=-1&ft=Home',
       header: {
-          'goods_promote_info-Type': 'application/json'
+          'Content-Type': 'application/json'
       },
       success: function(res) {
 
@@ -53,7 +53,7 @@ Page({
     wx.request({            // 导航栏数据请求;
       url: 'http://service.ipinbb.com:8080/goodsService/getHomeTabs',
       header: {
-          'goods_promote_info-Type': 'application/json'
+          'Content-Type': 'application/json'
       },
       success: function(res) {
 
@@ -83,7 +83,7 @@ Page({
     wx.request({            // banner图数据请求;
       url: 'http://service.ipinbb.com:8080/goodsService/getHomeBanner',
       header: {
-          'goods_promote_info-Type': 'application/json'
+          'Content-Type': 'application/json'
       },
       success: function(res) {
 
@@ -155,7 +155,7 @@ Page({
         page : pageIndex
       },
       header: {
-          'goods_promote_info-Type': 'application/json'
+          'Content-Type': 'application/json'
       },
       success: function(res) {
         
@@ -212,7 +212,7 @@ Page({
           page : pageIndex
         },
         header: {
-            'goods_promote_info-Type': 'application/json'
+            'Content-Type': 'application/json'
         },
         success: function(res) {
           
