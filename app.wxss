@@ -39,6 +39,84 @@ page {
     font-size: 28rpx;
 }
 
+/* 字体图标 */
+@font-face {
+    font-family: 'iconfont';  /* project id："163415" */
+    src: url('//at.alicdn.com/t/font_oai4zufu2m3ac3di.eot');
+    src: url('//at.alicdn.com/t/font_oai4zufu2m3ac3di.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_oai4zufu2m3ac3di.woff') format('woff'),
+    url('//at.alicdn.com/t/font_oai4zufu2m3ac3di.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_oai4zufu2m3ac3di.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:32rpx;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.4rpx;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-minus:before { content: "\e600"; }
+
+.icon-add:before { content: "\e601"; }
+
+.icon-weixin:before { content: "\e602"; }
+
+.icon-select:before { content: "\e603"; }
+
+.icon-right:before { content: "\e604"; }
+
+.icon-left:before { content: "\e605"; }
+
+.icon-plus:before { content: "\e606"; }
+
+.icon-people:before { content: "\e607"; }
+
+.icon-iconsarrow:before { content: "\e608"; }
+
+.icon-complete:before { content: "\e609"; }
+
+.icon-deliver:before { content: "\e60a"; }
+
+.icon-send:before { content: "\e60b"; }
+
+.icon-pay:before { content: "\e60c"; }
+
+.icon-group:before { content: "\e60d"; }
+
+.icon-invite:before { content: "\e60e"; }
+
+.icon-completed:before { content: "\e60f"; }
+
+.icon-noCompleted:before { content: "\e610"; }
+
+.icon-participate:before { content: "\e611"; }
+
+.icon-iconsreceipt:before { content: "\e612"; }
+
+.icon-hot:before { content: "\e613"; }
+
+.icon-nosearch:before { content: "\e614"; }
+
+.icon-delete:before { content: "\e615"; }
+
+.icon-time:before { content: "\e616"; }
+
+.icon-search:before { content: "\e617"; }
+
+.icon-coupon:before { content: "\e618"; }
+
+.icon-shixiao:before { content: "\e619"; }
+
+.icon-zhekou:before { content: "\e61a"; }
+
+.icon-cart:before { content: "\e61b"; }
+
+.icon-order:before { content: "\e61c"; }
+
+.icon-chongzhi3x:before { content: "\e61d"; }
 
 /* 提示信息 */
 .promptShow {
@@ -130,4 +208,11 @@ page {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.item-buy-people .icon-people {
+    display: inline-block;
+    font-size: 40rpx;
+    vertical-align: -14rpx;
+    overflow: hidden;
 }

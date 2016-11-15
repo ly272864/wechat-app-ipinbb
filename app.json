@@ -8,7 +8,6 @@
       "page/activity/discount/discount",
       "page/activity/lists/lists",
       "page/activity/tenGroup/tenGroup",
-
       "page/component/group/group",
       "page/component/detail/detail"
   ],

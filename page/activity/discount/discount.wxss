@@ -120,8 +120,5 @@
 
 .icon-right {
     float: right;
-    width: 32rpx;
-    height: 32rpx;
-    margin: 22rpx 0 00 16rpx;
-    background-color: rgb(102,102,102);
+    margin: 0 0 0 16rpx;
 }

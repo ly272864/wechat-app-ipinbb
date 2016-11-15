@@ -9,28 +9,28 @@
     <view class="marTop20 limited-box" wx:for="{{item.listItems}}" wx:key="">
         <navigator class="limited-top" url="../../component/detail/detail?id={{item.goodsId}}&platformId={{item.platformId}}">
             <view class="img-box">
-                <view class="seckill-tip">7.9折</view>
-                <image src=""></image>
+                <view class="seckill-tip">{{item.discount}}折</view>
+                <image src="{{item.imgUrl}}"></image>
             </view>
 
             <view class="limited-content">
-                <text class="limited-time">剩余时间 ：17 天</text>
-                <view class="limited-tit">3人团-自发热保暖防寒磁疗护膝</view>
+                <text class="limited-time">剩余时间：{{item.endTime}}天</text>
+                <view class="limited-tit">{{item.title}}</view>
                 <view class="limited-cont-btm">
-                    <text class="limited-group">3人团</text>
-                    <text class="group-price">¥46.20</text>
-                    <text class="font14 odd-price">¥98.00</text>
+                    <text class="limited-group">{{item.groupSize}}</text>
+                    <text class="group-price">¥{{item.groupPrice}}</text>
+                    <text class="font14 odd-price">¥{{item.oddPrice}}</text>
                 </view>
             </view>
         </navigator>
 
         <navigator class="limited-btm" url="">
             <view class="fn-right">
-                <text>查看淘宝价：¥58.00</text>
-                <view class="icon-right"></view>
+                <text>查看{{item.goodsFrom}}价：¥{{item.fromPrice}}</text>
+                <view class="icon-right iconfont icon-right"></view>
             </view>
 
-            <text class="font14">商品来源：淘宝</text>
+            <text class="font14">商品来源：{{item.goodsFrom}}</text>
         </navigator>
     </view>
 </view>

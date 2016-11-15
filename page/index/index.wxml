@@ -57,7 +57,7 @@
                 <text class="item-content">{{item.goods_promote_info}}</text>
                 <view class="item-btm">
                     <view class="item-buy-people">
-                        <view class=""></view>
+                        <view class="iconfont icon-people"></view>
                         {{item.goods_group_size}}人团
                     </view>
                     <view class="item-price">¥{{item.goods_group_price}}</view>

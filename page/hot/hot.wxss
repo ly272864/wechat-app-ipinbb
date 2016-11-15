@@ -8,11 +8,11 @@
     height: 100%;
 }
 
-.item-box {
+.hot-item-box {
     margin-bottom: 20rpx;
 }
 
-.item-top {
+.hot-item-top {
     display: flex;
     width: 100%;
     height: 220rpx;
@@ -27,13 +27,13 @@
     height: 160rpx;
 }
 
-.item-top-right {
+.hot-item-top-right {
     width: 506rpx;
     height: 160rpx;
     margin-left: 24rpx;
 }
 
-.item-title {
+.hot-item-title {
     display: block;
     width: 100%;
     height: 40rpx;
@@ -46,13 +46,13 @@
     overflow: hidden;
 }
 
-.item-price {
+.hot-item-price {
     margin-bottom: 30rpx;
     font-size: 28rpx;
     color: #fb5d5d;
 }
 
-.item-No-time-box {
+.hot-item-No-time-box {
     display: flex;
     width: 100%;
     height: 36rpx;
@@ -61,7 +61,7 @@
     color: #999;
 }
 
-.item-No {
+.hot-item-No {
     width: 300rpx;
 }
 
@@ -69,12 +69,12 @@
     color: #fb5d5d;
 }
 
-.item-time {
+.hot-item-time {
     width: 300rpx;
     text-align: right;
 }
 
-.item-btm {
+.hot-item-btm {
     display: flex;
     width: 100%;
     height: 92rpx;
@@ -83,27 +83,27 @@
     background-color: rgba(255,255,255,.7); 
 }
 
-.item-user-box {
+.hot-item-user-box {
     display: flex;
     width: 580rpx;
     height: 48rpx;
     overflow: hidden;
 }
 
-.item-user-img {
+.hot-item-user-img {
     width: 48rpx;
     height: 48rpx;
     margin-right: 20rpx;
 }
 
-.item-user-box image {
+.hot-item-user-box image {
     width: 48rpx;
     height: 48rpx;
     border-radius: 50%;
     overflow: hidden;
 }
 
-.item-btn {
+.hot-item-btn {
     display: block;
     width: 110rpx;
     height: 48rpx;

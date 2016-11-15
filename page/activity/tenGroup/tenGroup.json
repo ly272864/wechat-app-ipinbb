@@ -1,3 +1,4 @@
 {
-    "navigationBarTitleText": "10元任性专区"
+    "navigationBarTitleText": "10元任性团",
+    "enablePullDownRefresh": true
 }

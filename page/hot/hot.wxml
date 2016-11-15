@@ -2,33 +2,31 @@
     <scroll-view scroll-y="true" bindscrolltolower="loadList" class="layout">
 
         <!-- list start -->
-        <view>
-            <navigator wx:for="{{lists}}" wx:key="" class="item-box" url="../component/group/group?groupId={{item.groupId}}">
-                <view class="item-top">
-                    <view class="hot-img">
-                        <image src="{{item.goodsImg}}"></image>
-                    </view>
+        <navigator wx:for="{{lists}}" wx:key="" class="hot-item-box" url="../component/group/group?groupId={{item.groupId}}">
+            <view class="hot-item-top">
+                <view class="hot-img">
+                    <image src="{{item.goodsImg}}"></image>
+                </view>
 
-                    <view class="item-top-right">
-                        <text class="item-title">{{item.goodsTitle}}</text>
-                        <view class="item-price">{{item.groupSize}}人团 ¥{{item.groupPrice}}</view>
-                        <view class="item-No-time-box">
-                            <view class="item-No">仅差<text class="text-red">{{item.lessNum}}</text>人</view>
-                            <view class="item-time">剩余时间 <text>{{item.displayTime}}</text></view>
-                        </view>
+                <view class="hot-item-top-right">
+                    <text class="hot-item-title">{{item.goodsTitle}}</text>
+                    <view class="hot-item-price">{{item.groupSize}}人团 ¥{{item.groupPrice}}</view>
+                    <view class="hot-item-No-time-box">
+                        <view class="hot-item-No">仅差<text class="text-red">{{item.lessNum}}</text>人</view>
+                        <view class="hot-item-time">剩余时间 <text>{{item.displayTime}}</text></view>
                     </view>
                 </view>
-                
-                <view class="item-btm">
-                    <view class="item-user-box">
-                        <view wx:for="{{item.userLst}}" wx:key="" class="item-user-img">
-                            <image src="{{item.headImg}}"></image>
-                        </view>
+            </view>
+            
+            <view class="hot-item-btm">
+                <view class="hot-item-user-box">
+                    <view wx:for="{{item.userLst}}" wx:key="" class="hot-item-user-img">
+                        <image src="{{item.headImg}}"></image>
                     </view>
-                    <text class="item-btn">参与</text>
                 </view>
-            </navigator>
-        </view>
+                <text class="hot-item-btn">参与</text>
+            </view>
+        </navigator>
         <!-- / list end -->
 
         <!-- loading start -->
