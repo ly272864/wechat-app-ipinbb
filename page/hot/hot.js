@@ -10,7 +10,11 @@ Page({
         us: "",                 // 用户分享的ID，之前为了做分享统计什么的，现在没卵用
         lists: []
     },
-
+    onReady: function () {
+        wx.setNavigationBarTitle({
+            title: '正在热拼'
+        })
+    },
     onLoad: function(e) {
         var listArr = [],
             self = this,

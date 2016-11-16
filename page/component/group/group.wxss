@@ -9,9 +9,13 @@
 
 .header-item {
     display: flex;
-    width: 230rpx;
+    width: 250rpx;
     height: 60rpx;
     overflow: hidden;
+}
+
+.header-item-center {
+    width: 230rpx;
 }
 
 .header-item-center .status-img {
@@ -19,14 +23,14 @@
 }
 
 .header-item-last {
+    width: 210rpx;
     direction: rtl; 
 }
 
-.status-img {
-    width: 60rpx;
-    height: 60rpx;
-    margin-right: 6rpx; 
-    background-color: rgb(102,102,102);
+.header-item .iconfont {
+    font-size: 60rpx;
+    line-height: 60rpx;
+    margin-right: 6rpx;
 }
 
 .status-text {
@@ -37,6 +41,14 @@
     font-size: 24rpx;
     color: #777;
     overflow: hidden;
+}
+
+.statusColor1 {
+    color: rgb(251,93,93);
+}
+
+.statusColor2 {
+    color: rgb(153,153,153);
 }
 
 .header-item-last .status-text {
@@ -130,11 +142,11 @@
     color: #fb5d5d;
 }
 
-.lists-box {
+.group-lists-box {
     background-color: rgb(255,255,255);
 }
 
-.lists-title {
+.group-lists-title {
     display: block;
     width: 100%;
     line-height: 96rpx;
@@ -144,11 +156,11 @@
     border-bottom: 1rpx solid #ebebeb;
 }
 
-.lists-content {
+.group-lists-content {
     padding: 0 30rpx;
 }
 
-.item-box {
+.group-item-box {
     display: flex;
     width: 100%;
     height: 88rpx;
@@ -156,7 +168,7 @@
     border-bottom: 1rpx solid #ebebeb;
 }
 
-.user-img {
+.group-user-img {
     display: block;
     width: 88rpx;
     height: 88rpx;
@@ -164,13 +176,13 @@
     border-radius: 50%;
 }
 
-.item-content {
+.group-item-content {
     width: 480rpx;
     height: 88rpx;
     color: #999;
 }
 
-.item-name {
+.group-item-name {
     display: block;
     width: 100%;
     margin-bottom: 4rpx;
@@ -178,12 +190,12 @@
     font-size: 28rpx;
 }
 
-.item-title {
+.group-item-title {
     line-height: 34rpx;
     font-size: 24rpx;
 }
 
-.item-head {
+.group-item-head {
     display: block;
     width: 128rpx;
     height: 48rpx;

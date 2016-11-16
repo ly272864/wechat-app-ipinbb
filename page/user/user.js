@@ -1,5 +1,11 @@
 Page({
 
+    onReady: function () {
+        wx.setNavigationBarTitle({
+            title: '个人中心'
+        })
+    },
+
     loginFun: function(){
         wx.login({
             success: function(res) {

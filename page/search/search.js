@@ -11,5 +11,10 @@ Page({
     this.setData({
       hidden: false
     })
-  }
+  },
+  onReady: function () {
+        wx.setNavigationBarTitle({
+            title: '商品搜索'
+        })
+    }
 })

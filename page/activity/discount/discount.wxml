@@ -30,7 +30,7 @@
                 <view class="icon-right iconfont icon-right"></view>
             </view>
 
-            <text class="font14">商品来源：{{item.goodsFrom}}</text>
+            <text class="font14 text-color1">商品来源：{{item.goodsFrom}}</text>
         </navigator>
     </view>
 </view>

@@ -65,5 +65,10 @@ Page({
                 hidden: true
             })
         }, 1000)
+    },
+    onReady: function () {
+        wx.setNavigationBarTitle({
+            title: '妈妈说'
+        })
     }
 })
